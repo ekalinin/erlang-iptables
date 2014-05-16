@@ -48,7 +48,7 @@ append(Chain, Rule) ->
 append(Table, Chain, Rule) ->
     T = atom_to_list(Table),
     C = string:to_upper(atom_to_list(Chain)),
-    {ok, ?CMD(?BIN ++ " -t " ++ T ++ " -A " ++ C ++ " " ++ Rule)}.
+    {ok, ?CMD(?BIN ++ " -t " ++ T ++ " --append " ++ C ++ " " ++ Rule)}.
 
 
 %% @doc Check whether a rule matching the specification

@@ -4,9 +4,9 @@
 -include_lib("eunit/include/eunit.hrl").
 
 append_test_() -> [
-     ?_assertEqual({ok, "sudo iptables -t nat -A PREROUTING -i eth0 -j ACCEPT"},
+     ?_assertEqual({ok, "sudo iptables -t nat --append PREROUTING -i eth0 -j ACCEPT"},
         iptables:append(nat, prerouting, "-i eth0 -j ACCEPT")),
-     ?_assertEqual({ok, "sudo iptables -t filter -A INPUT -i lo -j ACCEPT"},
+     ?_assertEqual({ok, "sudo iptables -t filter --append INPUT -i lo -j ACCEPT"},
         iptables:append(input, "-i lo -j ACCEPT"))
     ].
 

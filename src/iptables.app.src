@@ -1,0 +1,12 @@
+{application, iptables,
+ [
+  {description, "iptables wrapper for erlang"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { iptables_app, []}},
+  {env, []}
+ ]}.

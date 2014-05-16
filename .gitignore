@@ -1,0 +1,6 @@
+*.swp
+examples/
+ebin/
+doc/
+.eunit/
+TODO.md

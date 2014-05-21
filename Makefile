@@ -21,3 +21,8 @@ test:
 
 dialyze: compile
 	@$(DIALYZER) $(DIALYZER_OPTS) -r ./ebin
+
+deploy:
+	@git tag `grep -E -o '[0-9]\.[0-9]\.[0-9]{1,2}' src/iptables.app.src`
+	@git push --tags origin master
+
